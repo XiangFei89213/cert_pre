@@ -1,0 +1,28 @@
+// the MAX value for int in C and the MIN value is different, 
+// 絕對值for the INT_MIN is smaller than 絕對值for INT_MAX
+#include <limits.h>
+
+int reverse(int x){
+    int sign = (x<0) ? -1:1;
+    long num = (x<0) ? -(long)x: (long)x;
+    int digit = 0;
+    int rev = 0;
+    
+    while (num > 0){
+        digit = num%10;
+        num = num/10;
+        if(rev > INT_MAX /10){
+            return 0;
+        } else{
+            rev = rev*10 + digit;
+        }
+    }
+
+    if (sign == -1){
+        rev = 0 - rev;
+    } else {
+        rev = rev;
+    }
+
+    return rev;
+}
