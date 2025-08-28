@@ -1,0 +1,64 @@
+// reverse a string 
+// strlen() vs sizeof() 
+// char *ptr +1 = point to the next char
+// int *ptr +1 also means point to the next int, not bacause of the digit(位元數)
+
+
+int is_alphanumeric(char ch){
+    if( ch>='0'&& ch<='9' )  return 1;
+    if( ch>='A'&& ch<='Z' )  return 2;
+    if( ch>='a'&& ch<='z' )  return 3; 
+    else return 0;   
+}
+bool isPalindrome(char* s) {
+
+    if (s == NULL || *s == '\0') return true;
+
+    
+    // point to the last character
+    char *last = s + strlen(s) -1;
+    
+
+    // skip non letter
+    while(last > s){
+    
+        // skip non letter
+        while(!is_alphanumeric(*last)){
+            // if every input are 
+            if (s >= last) return true;
+            last--;
+        }
+        while(!is_alphanumeric(*s)){
+            if (s >= last) return true;
+            s++;
+        }
+        
+        
+        // compare 
+        if( (*last) == (*s) ){
+            // move s and ptr
+            s++;
+            last--;
+
+            // if last is upper case 
+        } else if( is_alphanumeric(*last) ==2 ){
+            if((*last)+32 == *s){
+                s++;
+                last--;
+            } else return false;
+            
+            // if s is upper case
+        } else if(is_alphanumeric(*s) ==2 ){
+            if((*s)+32 == *last){
+                s++;
+                last--;
+            } else return false;
+        } else {
+            return false;
+        }
+
+    }
+    return true;
+
+
+}
