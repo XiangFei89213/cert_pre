@@ -1,5 +1,11 @@
-// in-place
+// pointer 
 // pointer point to the end : char *ptr = s+sSize-1; 
+// s + sSize - 1 會指向最後一個字元，因為 char* 遞增是以 1 byte 為單位, this is a pointer thing, would be +1 for a int pointer as well, not +4
+
+// get the length of s
+// because the question have sSize, so use sSize, you don't know if s ends with a '\0'
+// strlen(s) counts the elements before '\0', can pass a pointer to char(or string), will return the lenght of char(or string) 
+// sizeof(s) counts all the elements (encluding '\0'), cannot pass pointer to this function, will rerturn the length of pointer, 
 
 
 void reverseString(char* s, int sSize) {
