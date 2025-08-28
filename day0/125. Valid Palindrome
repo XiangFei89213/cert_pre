@@ -1,7 +1,8 @@
 // reverse a string 
-// strlen() vs sizeof() 
+// strlen() vs sizeof() -> #344
 // char *ptr +1 = point to the next char
 // int *ptr +1 also means point to the next int, not bacause of the digit(位元數)
+
 
 
 int is_alphanumeric(char ch){
