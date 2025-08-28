@@ -1,3 +1,8 @@
+// List in C language (1. head pointer, tail pointer, 2. point to the last element vs point to the tail) 
+// heap vs stack (malloc is on heap and will continue to exist even the func ends, so remember to free() ), define int is on struct, will disappear when func ends.
+// struct pointer : ptr->a == (*ptr).A
+
+
 /**
  * Definition for singly-linked list.
  * struct ListNode {
