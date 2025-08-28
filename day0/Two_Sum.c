@@ -1,3 +1,8 @@
+// return type is int pointer( result)
+// put the length of the return pointer's length in the *returnSize of the peremeter of the func 
+// malloc()
+
+
 int* twoSum(int* nums, int numsSize, int target, int* returnSize) {
 
     
