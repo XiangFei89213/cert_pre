@@ -1,0 +1,20 @@
+// in-place
+// pointer point to the end : char *ptr = s+sSize-1; 
+
+
+void reverseString(char* s, int sSize) {
+    
+    // a pointer point to the end
+    char *ptr = s+sSize-1; 
+
+    while( s < ptr){
+        // create a temp char, and temp = s
+        char temp = *s;
+
+        *s = *ptr;
+        *ptr = temp;
+
+        s ++;
+        ptr --;
+    }    
+}
