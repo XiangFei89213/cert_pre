@@ -1,0 +1,30 @@
+// to be fast, inverse half of the value
+// 要知道有幾位數只能用除法一直除到 x/10 < 1
+// last must cosider the case if it is odd digit of number of even digit of number
+
+bool isPalindrome(int x) {
+    // negative number return false
+    if( x < 0 ) return false;
+    if( x>=0 && x<=9) return true;
+    // if ends with 0 must be false
+    if( x%10 == 0 )return false;
+
+
+    int rev = 0;
+
+    while(rev < x ){
+        int last = x% 10;
+        rev = rev*10 + last;
+        x = x/10;
+    }
+
+    if( rev == x ){
+        // even number of digit
+        return true;
+    } else if( rev/10 == x ){
+        // odd number of digit
+        return true;
+    } else{
+        return false;
+    }
+}
