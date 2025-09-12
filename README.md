@@ -1,7 +1,7 @@
 # cert_pre
 Leetcode solution
 #### 9/12
-717. 1bit or 2 bits: should i use if() or while(), should i loop from the front or back.
+717. 1bit or 2 bits: 卡在解題思路: should i use if() or while(), should i loop from the front or back.
 
 #### 9/11
 13. 重新看這題: 我原本想要用char pointer, 因爲要比較前一個還有後面一個的數值, 所以就出現edge case 的address overflow, 然後chatGPT 直接new 一個int 這樣就可以直接把前面的值存下來. 就不用access 到edge case了
