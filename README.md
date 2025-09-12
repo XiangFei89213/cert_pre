@@ -9,7 +9,7 @@ return type is int pointer,
 malloc() will return void*（泛型指標), must cast to change type
 
 ##### 2. Add Two Numbers.c
-
+不知道我還沒復習
 
 review: 
 1. 8/21 struct pointer!! 
