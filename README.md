@@ -2,7 +2,8 @@
 Leetcode solution
 
 #### 9/11
-13. 我他媽的真的不知道. 重新看這題: 我原本想要用char pointer, 因爲要比較前一個還有後面一個的數值, 所以就出現edge case 的address overflow, 然後chatGPT 直接new 一個int 這樣就可以直接把值存下來. 
+13. 重新看這題: 我原本想要用char pointer, 因爲要比較前一個還有後面一個的數值, 所以就出現edge case 的address overflow, 然後chatGPT 直接new 一個int 這樣就可以直接把前面的值存下來. 就不用access 到edge case了
+14. 從新刊這題: longest common prefix: double for loop, because have to compare n strings and a char in each string, 如果遇到不一樣的就return( 不是break), 如果一直一樣就return the first string
 
 ##### 1. Two_Sum.c
 return type is int pointer, 
