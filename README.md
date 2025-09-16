@@ -4,8 +4,9 @@ Leetcode solution
 ### wk3
 #### 9/15 
 review: 
-14. longest common prefix
 
+14. longest common prefix:
+  the hard part is logic, 還有我想要只要有不一樣就離開loop so i choose while in stead of for loop, but for loop is cleaner( ask chatGPT, how should i stop as long as one char is different) 
 344. in place reverse string
 ### wk2
 #### 9/12
