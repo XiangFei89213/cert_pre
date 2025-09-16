@@ -1,5 +1,9 @@
 # cert_pre
 Leetcode solution
+#### 9/15
+review: 
+14. longest common prefix
+344. in place reverse string
 #### 9/12
 717. 1bit or 2 bits: 卡在解題思路: should i use if() or while(), should i loop from the front or back.
 
