@@ -7,7 +7,7 @@ review:
 
 14. longest common prefix:
   the hard part is logic, 還有我想要只要有不一樣就離開loop so i choose while in stead of for loop, but for loop is cleaner( ask chatGPT, how should i stop as long as one char is different) 
-344. in place reverse string
+344. in place reverse string: nothing much to do!! just because in-place musut use swap, the syntax of pointer. 
 ### wk2
 #### 9/12
 717. 1bit or 2 bits: 卡在解題思路: should i use if() or while(), should i loop from the front or back.
