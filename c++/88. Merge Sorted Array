@@ -1,3 +1,4 @@
+// solution 1
 class Solution {
 public:
     void merge(vector<int>& nums1, int m, vector<int>& nums2, int n) {
@@ -26,3 +27,28 @@ public:
 
     }
 };
+
+// solution 2 
+class Solution {
+public:
+    void merge(vector<int>& nums1, int m, vector<int>& nums2, int n) {
+        int i = m - 1;          // 注意：i 指 nums1 的最後有效
+        int j = n - 1;          // j 指 nums2 的最後
+        int k = m + n - 1;      // 寫入位置
+
+        // 目標：把 nums2 的東西全放進 nums1
+        while (j >= 0) {
+
+            // when nums2 跟nums1 都還有東西
+            if (i >= 0 && nums1[i] > nums2[j]) {
+                nums1[k--] = nums1[i--];
+
+                // 只剩nums2 還有東西
+            } else {
+                nums1[k--] = nums2[j--];
+            }                               
+        }
+    }
+};
+
+
