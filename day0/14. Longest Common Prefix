@@ -1,27 +1,28 @@
-    // string belong to library
-    // char[], malloc
+// malloc, must free( 現在是因爲main 不是我自己寫的, 但是用malloc mem is using heap
+// so must free(prefix) in main)
 
-char* longestCommonPrefix(char** strs, int strsSize) {
 
-    // get the length of strs[0] so define the size of return value
+char* longestCommonPrefix(char** strs, int strsSize){
+    // define return type, 
     int len = strlen(strs[0]);
-    char *prefix = (char*)malloc(sizeof(char) * (len + 1));
-    
-    // double loop to compare
-    for (int j = 0; j < len; j++) {
-        char c = strs[0][j];  // 從第一個字串取第 j 個字元
-        for (int i = 1; i < strsSize; i++) {
-            if (strs[i][j] != c || strs[i][j] == '\0') {
-                prefix[j] = '\0'; // 加上字串結尾
+    char *prefix = (char*)malloc((len+1) * sizeof(char) );
+
+    // doubel for loop
+    for(int i = 0; i<len; i++){
+
+        char temp = strs[0][i];
+
+        for(int j = 1; j<strsSize; j++){
+            if(temp == '\0' || temp != strs[j][i]){
+                prefix[i] = '\0';
                 return prefix;
             }
+            
         }
-        prefix[j] = c; // 如果所有字串在第 j 位都相同
+        prefix[i] = temp;
     }
-    prefix[len] = '\0'; // 全部走完 → 第一個字串就是最長前綴
-    return prefix;
-    
 
-
+    prefix[len] = '\0';
     return prefix;
+
 }
