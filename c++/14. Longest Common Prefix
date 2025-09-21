@@ -1,0 +1,31 @@
+// return type is substring
+// get how many string are there in strs: strs.size()
+class Solution {
+public:
+    string longestCommonPrefix(vector<string>& strs) {
+
+        // return type is substring  
+        if (strs.empty()) return "";
+
+
+        // vertical scan 
+        for (int i = 0; i<strs[0].size();i++ ){
+            char c = strs[0][i];
+
+            // get how many string are there in strs
+            for(int j = 1 ; j< strs.size(); j++){
+
+                // If index exceeds length( str[j] is shorter than str[0])
+                // OR mismatch
+                // return 
+                if( strs[j][i] == '\0' || c != strs[j][i]){
+                    return strs[0].substr(0, i);
+                }
+
+            }
+
+        }
+        // every is the same return substring
+        return strs[0];
+    }
+};
