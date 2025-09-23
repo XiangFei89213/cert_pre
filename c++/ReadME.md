@@ -1,3 +1,12 @@
+c++:
+1. why define Solution class
+    因爲這樣
+   ```cpp
+   Solution sol;
+vector<int> arr = {5, 2, 9};
+auto result = sol.sortArray(arr);
+
+    ``` 
 88. Merge Sorted Array:
     記得處理最後的剩餘nuns2
     , 用pointer 或index 來記錄array 的位置都可以
