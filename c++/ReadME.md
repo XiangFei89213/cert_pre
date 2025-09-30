@@ -3,7 +3,7 @@ c++:
     因爲這樣
    
    ```cpp
-   Solution sol; vector<int> arr = {5, 2, 9}; auto result = sol.sortArray(arr);    ``` 
+   Solution sol; vector<int> arr = {5, 2, 9}; auto result = sol.sortArray(arr);
     
 88. Merge Sorted Array:
     記得處理最後的剩餘nuns2
