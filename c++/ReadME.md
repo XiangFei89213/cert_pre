@@ -6,7 +6,6 @@ c++:
    Solution sol;
 vector<int> arr = {5, 2, 9};
 auto result = sol.sortArray(arr);
-
     ``` 
     
 88. Merge Sorted Array:
