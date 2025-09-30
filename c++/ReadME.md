@@ -4,6 +4,8 @@ c++:
    
    ```cpp
    Solution sol; vector<int> arr = {5, 2, 9}; auto result = sol.sortArray(arr);
+   ```
+   就是之後才可以建立一個instance solution, 
     
 88. Merge Sorted Array:
     記得處理最後的剩餘nuns2
